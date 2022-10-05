@@ -1,0 +1,81 @@
+*{
+    color: rgba(255, 255, 255, 0.651);
+    font-family: Roboto;
+}
+
+.img-container{
+    width: 100%;
+    height: 60%;
+}
+
+
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.description-container{
+    padding: 15px;
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.info-container{
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.votes,.date,.runtime{
+    margin-right: 15px;
+}
+
+.votes{
+    color: rgb(1, 105, 1);
+}
+
+.icons{
+    width: 100%;
+}
+
+.icons button{
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin: 0 5px;
+    outline-style: none;
+}
+
+
+
+
+.icons span{
+    display: block;
+    font-size: 15px;   
+}
+
+
+
+.icon-add-movie:hover{
+    color: rgb(0, 255, 0); 
+    transition: 0.3s;
+}
+
+.icon-like:hover{
+    color: #4caeff;
+    transition: 0.3s;
+}
+
+.icon-add{
+    color: rgb(0, 255, 0); 
+}
+
+
+

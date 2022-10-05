@@ -1,0 +1,40 @@
+<div class="img-container">
+    <img [src]="data.img" alt="" width="50" height="50">
+</div>
+<div class="description-container">
+    <h1 class="title">
+        {{ data.title }}
+    </h1>
+    <div class="info-container">
+        <div class="votes">{{ data.votes }}/10</div>
+        <div class="date">{{ data.date | date }}</div>
+        <div class="runtime">{{ data.runtime }} min.</div>
+    </div>
+
+    <div>
+        <p>
+            {{ data.description }}
+        </p>
+    </div>
+
+    <div class="icons">
+
+        <button *ngIf="flagList">
+            <i class="fa-solid fa-check icon-add"></i>
+            <span>Add</span>
+        </button>
+        
+        <button  (click)="addMovie(data.id)" *ngIf="!flagList">
+            <i class="fa-solid fa-plus icon-add-movie"></i>
+            <span>Add my list</span>
+        </button>
+       
+        <button (click)="likeMovie(data.id)" >
+            <i class="fa-solid fa-thumbs-up icon-like"></i>
+            <span>Vote</span>
+        </button>
+
+        
+        
+    </div>
+</div>

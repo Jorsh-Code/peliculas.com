@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 import { RequestService } from './services/request.service';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DescriptionComponent } from './components/description/description.component';
 
 @Component({
   selector: 'app-root',
@@ -9,27 +7,19 @@ import { DescriptionComponent } from './components/description/description.compo
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  public movies!: any[] ; 
-  constructor(private requestService: RequestService,public dialog: MatDialog){
-    this.getMovies();
+   
+  public genresList!: any[];
+
+  constructor(private requestService: RequestService){
+    this.getGenres();
   }
 
-  getMovies(){
-    this.requestService.getMovies().subscribe((resp: any) =>{
-      this.movies = resp;
+  getGenres(){
+    this.requestService.getGenres().subscribe((resp: any) => {
+      this.genresList = resp.genres;
+      this.requestService.genresList = resp.genres;
     });
   }
 
-  openDescription(id: string) {
-    this.requestService.getMovie(id).subscribe((resp:any) =>{
-      this.dialog.open(DescriptionComponent, {
-        height: (screen.height-100)+'px',
-        width: (screen.width-700)+'px',
-        data: resp,
-      });
-    })
-    
-  }
 
 }

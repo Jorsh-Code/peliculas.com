@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 const routes: Routes = [
   {
-    path:'uno',
-    component: AppComponent
+    path:'',
+    component: MovieComponent,
+    pathMatch: 'full'
   },
   {
-    path:'dos',
-    component: AppComponent
+    path:'genre/:movie',
+    component:MovieComponent, 
   },
   {
-    path:'tres',
-    component: AppComponent
+    path:'**',
+    redirectTo: ''
   }
 ];
 

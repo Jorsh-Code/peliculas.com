@@ -1,5 +1,11 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+
+.dash{
+  overflow: hidden;
+  position: fixed;
+}
+
 .nav{
     width: 300px;
     background-color: black;
@@ -16,25 +22,7 @@
   font-weight: bold;
 }
 
-.container-movies{
-  background-color: rgba(0, 0, 0, 0.925);
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 15px;
-  box-sizing: border-box;
-}
 
-.card{
-  background-color: black; 
-  margin: 15px 0px;
-  width: 220px; 
-  height: 300px;
-}
 
-.card:hover{
-  box-shadow: 0 0 5px white;
-}
 
 

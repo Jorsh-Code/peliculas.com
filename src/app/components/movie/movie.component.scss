@@ -1,0 +1,26 @@
+
+
+.card{
+    background-color: black; 
+    margin: 15px 10px;
+    width: 220px; 
+    height: 300px;
+  }
+  
+  .card:hover{
+    box-shadow: 0 0 5px white;
+  }
+
+  .container-movies{
+    background-color: rgba(0, 0, 0, 0.925);
+    width: 100%;
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
